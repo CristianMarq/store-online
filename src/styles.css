@@ -1,0 +1,55 @@
+html body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+#form-product {
+  position: relative;
+  top: 30px;
+  left: 15px;
+}
+
+#form-product label {
+  font-family: "Roboto";
+  color: gray;
+}
+
+#form-product input {
+  background-color: rgba(0, 255, 255, 0.048);
+  display: block;
+  border: none;
+  border-radius: 15px;
+  outline: rgba(0, 0, 0, 0);
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: "Roboto";
+  width: 200px;
+  height: 22px;
+}
+
+#agregar {
+  font-family: "Roboto";
+  width: 208px;
+  height: 28px;
+  border: hidden;
+  border-radius: 15px;
+  background-color: rgb(54, 54, 250);
+  color: white;
+}
+
+#agregar:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+#form-product input:focus {
+  border: 1px solid rgb(165, 164, 164);
+  background-color: rgba(128, 128, 128, 0.315);
+}
+
+#form-product input:hover {
+  background-color: rgba(128, 128, 128, 0.315);
+}
+
+
