@@ -38,6 +38,75 @@ html body {
   color: white;
 }
 
+#products {
+  width: 60%;
+  position: relative;
+  left: 300px;
+  bottom: 200px;
+}
+
+#list-products {
+  position: relative;
+  left: 20%;
+}
+
+#list-products label {
+  font-family: "Roboto";
+}
+
+#list-products li {
+  list-style-type: none;
+}
+
+#price {
+  position: relative;
+  left: 35%;
+  background-color: rgb(29, 207, 29);
+  color: white;
+  top: 6px;
+  font-size: 1.1em;
+  padding: 3px;
+  border: 1px solid gray;
+  border-radius: 15px;
+}
+
+#view {
+  border: 1px solid;
+  border-style: inset;
+  width: 35%;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#destroy {
+  background-color: rgba(255, 0, 0, 0.719);
+  color: white;
+  font-family: "Roboto";
+  border: hidden;
+  border-radius: 15px;
+}
+
+#cont-filters {
+  background-color: white;
+  position: relative;
+  left: 25%;
+}
+
+#filters li {
+  display: inline;
+}
+
+#filters li a {
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-family: 'Roboto';
+}
+
 #agregar:hover {
   background-color: blue;
   cursor: pointer;
@@ -52,4 +121,19 @@ html body {
   background-color: rgba(128, 128, 128, 0.315);
 }
 
+#destroy:hover {
+  cursor: pointer;
+  background-color: red;
+  font-size: 1.2em;
+}
 
+#filters a:hover {
+  background-color: rgba(128, 128, 128, 0.521);
+  cursor: pointer;
+}
+
+#filters li a.selected {
+  border-color: rgba(175, 47, 47, 0.2);
+  border-style: inset;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
