@@ -115,6 +115,11 @@ html body {
   font-family: "Roboto";
 }
 
+#list-products li.completed label {
+  color: #cdcdcd;
+  text-decoration: line-through;
+}
+
 #agregar:hover {
   background-color: blue;
   cursor: pointer;
