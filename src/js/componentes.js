@@ -1,5 +1,4 @@
 // Referencias al dom
-
 const divProductos = document.querySelector("#list-products");
 
 const stringToHtml = (string) => {
