@@ -1,5 +1,10 @@
+import { productList } from "../index";
+import { Producto } from "../classes";
+
 // Referencias al dom
 const divProductos = document.querySelector("#list-products");
+const formProduct = document.querySelector("#form-product");
+const buttonAgregar = document.querySelector("#agregar");
 
 const stringToHtml = (string) => {
   const parser = new DOMParser();
@@ -26,3 +31,20 @@ export const crearProductoHtml = (producto) => {
 
   return elementHtml;
 };
+
+const cargaForm = () => {
+  formProduct.onsubmit = (event) => {
+    event.preventDefault();
+    const nombre = document.querySelector("#name").value;
+    const descripcion = document.querySelector("#descripcion").value;
+    const precio = document.querySelector("#precio").value;
+
+    const producto = new Producto(nombre, descripcion, precio);
+    productList.nuevoProducto(producto);
+    crearProductoHtml(producto);
+  };
+};
+
+buttonAgregar.addEventListener("click", () => {
+  cargaForm();
+});
