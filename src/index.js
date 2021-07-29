@@ -9,3 +9,5 @@ export const productList = new ProductosList();
 // productList.nuevoProducto(producto2);
 console.log(productList);
 productList._productos.forEach((element) => crearProductoHtml(element));
+
+
