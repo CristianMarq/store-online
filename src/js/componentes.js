@@ -48,3 +48,14 @@ const cargaForm = () => {
 buttonAgregar.addEventListener("click", () => {
   cargaForm();
 });
+
+divProductos.addEventListener("click", (event) => {
+  const nombreElemento = event.target.localName;
+  const productoElemento = event.target.parentElement.parentElement;
+  const todoId = productoElemento.getAttribute("data-id");
+
+  if (nombreElemento.includes("input")) {
+    productList.marcarCompletado(todoId);
+    productoElemento.classList.toggle("completed");
+  }
+});
