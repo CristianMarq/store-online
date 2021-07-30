@@ -57,5 +57,10 @@ divProductos.addEventListener("click", (event) => {
   if (nombreElemento.includes("input")) {
     productList.marcarCompletado(todoId);
     productoElemento.classList.toggle("completed");
+  } else if (nombreElemento.includes("button")) {
+    productList.eliminarTodo(todoId);
+    divProductos.removeChild(productoElemento);
   }
 });
+
+
