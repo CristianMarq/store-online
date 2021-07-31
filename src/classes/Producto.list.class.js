@@ -1,3 +1,5 @@
+import { Producto } from "./Producto.class";
+
 export class ProductosList {
   _productos;
 
@@ -34,5 +36,9 @@ export class ProductosList {
     this._productos = localStorage.getItem("producto")
       ? JSON.parse(localStorage.getItem("producto"))
       : [];
+
+    this._productos = this._productos.map((element) =>
+      Producto.fromJson(element)
+    );
   }
 }

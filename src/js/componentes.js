@@ -5,6 +5,8 @@ import { Producto } from "../classes";
 const divProductos = document.querySelector("#list-products");
 const formProduct = document.querySelector("#form-product");
 const buttonAgregar = document.querySelector("#agregar");
+const listFiltros = document.querySelector("#filters");
+const ancFiltros = document.querySelectorAll(".filtro");
 
 const stringToHtml = (string) => {
   const parser = new DOMParser();
@@ -63,4 +65,31 @@ divProductos.addEventListener("click", (event) => {
   }
 });
 
+listFiltros.addEventListener("click", (event) => {
+  const nombreFiltro = event.target.text;
 
+  if (!nombreFiltro) {
+    return;
+  }
+
+  for (const producto of divProductos.children) {
+    producto.classList.remove("hidden");
+    const completado = producto.classList.contains("completed");
+
+    ancFiltros.forEach((element) => element.classList.remove("selected"));
+    event.target.classList.add("selected");
+
+    switch (nombreFiltro) {
+      case "Agotados":
+        if (!completado) {
+          producto.classList.add("hidden");
+        }
+        break;
+      case "Disponibles":
+        if (completado) {
+          producto.classList.add("hidden");
+        }
+        break;
+    }
+  }
+});

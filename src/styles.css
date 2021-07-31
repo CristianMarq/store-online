@@ -120,6 +120,10 @@ html body {
   text-decoration: line-through;
 }
 
+.hidden {
+  display: none;
+}
+
 #agregar:hover {
   background-color: blue;
   cursor: pointer;
